@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmers' Form App</title>
+    <style>
+
+        body {
+            background-image: url('https://images.unsplash.com/photo-1527330772182-997f9850cab9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80');
+            background-size: cover; /* Cover the entire viewport */
+            background-repeat: no-repeat; /* Prevent image repetition */
+            background-attachment: fixed; /* Fixed background */
+            background-position: center center; /* Center the background image */
+        }
+
+        /* Styling for the container that centers the form */
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        /* Styling for the form container */
+        .form-container {
+            max-width: 600px; /* Adjust the maximum width */
+            padding: 30px; /* Adjust the padding to increase size */
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            background-color: #f5f5f5;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Styling for form elements */
+        .form-container label, .form-container select, .form-container input[type="text"] {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .form-container input[type="text"], .form-container select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .form-container button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .form-container button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Styling for the confirmation message */
+        .confirmation-message {
+            display: none;
+            text-align: center;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <h2>Farmer's Information</h2>
+            <form id="farmersForm">
+                <label for="farmerName">Farmer Name:</label>
+                <input type="text" id="farmerName" name="farmerName" required>
+
+                <label for="contact">Contact:</label>
+                <input type="text" id="contact" name="contact" required>
+
+                <label for="state">State:</label>
+                <input type="text" id="state" name="state" required>
+
+                <label for="crop">Select Crop:</label>
+                <select id="crop" name="crop" required>
+                    <option value="Rabbi">Rabbi</option>
+                    <option value="Kharif">Kharif</option>
+                    <option value="Zaid">Zaid</option>
+                </select>
+
+                <label for="image">Capture Image:</label>
+                <input type="file" id="image" name="image" accept="image/*" capture="camera" required>
+
+                <button type="submit">Submit</button>
+            </form>
+
+            <!-- Confirmation message -->
+            <div class="confirmation-message" id="confirmationMessage">
+                Thank you for submitting your information!
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript for handling form submission
+        document.getElementById("farmersForm").addEventListener("submit", function (event) {
+            event.preventDefault(); // Prevent the default form submission behavior
+
+            // You can add code here to send the form data to your server or perform any other actions you need.
+            
+            // Display the confirmation message
+            document.getElementById("confirmationMessage").style.display = "block";
+            window.location.href = "client.html";
+        });
+    </script>
+</body>
+</html>

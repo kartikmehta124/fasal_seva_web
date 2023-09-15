@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Farmer Information</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<style>
+    /* styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #0077cc;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.farmer-info {
+    flex: 1;
+    padding: 10px;
+}
+
+.image {
+    flex: 1;
+    text-align: center;
+    padding: 10px;
+
+}
+
+.solution {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: none;
+}
+.solution {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center; /* Center the text and button horizontally */
+}
+
+</style>
+<body>
+    <header>
+        <h1>Farmer Profile</h1>
+    </header>
+    <div id="Contain">
+    <div class="container" >
+        <div class="farmer-info">
+            <h2>Farmer Name: Hardeep Singh</h2>
+            <p>Farmer Address: Ludhiana, Punjab</p>
+            <p>Contact Number: 9856439130</p>
+            <p>Work Experience: 2.5 years</p>
+        </div>
+        <div class="image">
+            <img src="disease1.jpg" alt="Disease Image">
+        </div>
+    </div>
+    <div class="solution">
+        <h2>Solution</h2>
+        <form action="expert.html" method="post">
+            <textarea rows="6" cols="50" placeholder="Write your solution here..." name="solution"></textarea>
+            <button type="submit" class="btn">Submit</button>
+        </form>
+    </div>
+    </div>
+    <script>
+        document.getElementById("Contain").addEventListener("submit", function (event) {
+            event.preventDefault();
+            window.location.href ="expert.html";
+        });
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+            text-align: center;
+            background-image: url(https://images.unsplash.com/photo-1527330772182-997f9850cab9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 80vh;
+        }
+
+        .input-container {
+            margin-bottom: 10px;
+        }
+
+        input {
+            padding: 10px;
+            width: 250px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 30px;
+            font-size: 18px;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            margin: 10px;
+        }
+
+        .forgot-password {
+            margin-top: 20px;
+        }
+
+        /* Additional CSS for the select input */
+        select {
+            padding: 10px;
+            width: 250px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <img src="./logo3.png" alt="logo image" height="200" >
+
+    <div class="container">
+        <form id="loginForm">
+            <div class="input-container">
+                <input type="text" placeholder="Username" id="username" required>
+            </div>
+            <div class="input-container">
+                <input type="password" placeholder="Password" id="password" required>
+            </div>
+            <!-- Select input for user type -->
+            <div class="input-container">
+                <select id="userType">
+                    <option value="client">Farmer</option>
+                    <option value="expert">Expert</option>
+                </select>
+            </div>
+            <button type="button" class="button" id="loginButton">Login</button>
+            <a href="#" class="button" id="signupButton">Sign up</a>
+        </form>
+    </div>
+    <script>
+        document.getElementById("signupButton").addEventListener("click", function() {
+            window.location.href = "signup.html";
+        });
+
+        // Add an event listener to the Login button
+        document.getElementById("loginButton").addEventListener("click", function() {
+            validateLoginForm(); // Call the validation function
+        });
+
+        function validateLoginForm() {
+            // Get the username, password, and user type input fields
+            var usernameField = document.getElementById("username");
+            var passwordField = document.getElementById("password");
+            var userTypeField = document.getElementById("userType");
+
+            // Check if all fields are filled out
+            if (usernameField.value.trim() === "" || passwordField.value.trim() === "") {
+                alert("Please fill in both username and password fields.");
+            } else {
+                // Get the selected user type
+                var userType = userTypeField.value;
+
+                // Redirect based on the selected user type
+                if (userType === "client") {
+                    window.location.href = "client.html"; // Redirect to client page
+                } else if (userType === "expert") {
+                    window.location.href = "expert.html"; // Redirect to expert page
+                }
+            }
+        }
+    </script>
+</body>
+</html>

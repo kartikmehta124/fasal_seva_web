@@ -1,0 +1,86 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+            text-align: center;
+            background-image: url(https://images.unsplash.com/photo-1598265048456-6b6e269c0edc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGNyb3AlMjBmaWVsZHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 15px 30px;
+            font-size: 18px;
+            color: #fff;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            margin: 10px;
+            border-radius: 30px;
+            transition: background-color 0.3s ease;
+            min-width: 200px;
+            text-align: center;
+        }
+
+        .create-complaint {
+            background-color: #007bff;
+        }
+
+        .complaint-list {
+            background-color: #33cc33;
+        }
+
+        .feedback {
+            background-color: #ff6600;
+        }
+
+        .button-icon {
+            font-size: 24px;
+            margin-right: 10px;
+        }
+
+        .button:hover {
+            background-color: #0056b3;
+        }
+        
+        
+    </style>
+</head>
+<body>
+    <div class="logo">
+
+        <img src="./logo3.png" alt="logo_img" height="100">
+    </div>
+    
+    <div class="container">
+        <a href="create_complaint.html" class="button create-complaint">
+            <span class="button-icon">✉️</span> Create Complaint
+        </a>
+        <a href="complaint_list.html" class="button complaint-list">
+            <span class="button-icon">📋</span> Complaint List
+        </a>
+        <a href="feedback.html" class="button feedback">
+            <span class="button-icon">📢</span> Feedback
+        </a>
+    </div>
+</body>
+</html>
+

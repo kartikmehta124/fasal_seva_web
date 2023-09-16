@@ -4,7 +4,7 @@
     <title>Feedback Form</title>
 </head>
 <style>
-    /* styles.css */
+   
 
     body {
     font-family: Arial, sans-serif;
@@ -14,7 +14,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh; /* This ensures the page takes up the full viewport height */
+    height: 100vh; 
     background-image: url(https://images.unsplash.com/photo-1527330772182-997f9850cab9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80);
 }
 
@@ -84,11 +84,8 @@ button[type="submit"]:hover {
     </div>
     <script>
        document.getElementById("feedbackForm").addEventListener("submit", function (event) {
-            event.preventDefault(); // Prevent the default form submission behavior
-
-            // You can add code here to send the form data to your server or perform any other actions you need.
-            
-            // Display the confirmation message
+            event.preventDefault(); 
+           
             window.location.href = "client.html";
         });
     </script>

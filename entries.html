@@ -36,18 +36,18 @@
     <div class="container">
         <h1>Form Entries</h1>
         <div id="entriesContainer">
-            <!-- Entries will be displayed here -->
+            
         </div>
     </div>
 
     <script>
-        // Function to parse URL parameters
+        
         function getURLParameter(name) {
             const urlParams = new URLSearchParams(window.location.search);
             return urlParams.get(name);
         }
 
-        // Retrieve data from URL parameters and display it as entries
+        
         const entriesContainer = document.getElementById("entriesContainer");
 
         const name = getURLParameter("name");

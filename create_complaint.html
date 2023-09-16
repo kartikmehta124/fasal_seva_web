@@ -8,13 +8,13 @@
 
         body {
             background-image: url('https://images.unsplash.com/photo-1527330772182-997f9850cab9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80');
-            background-size: cover; /* Cover the entire viewport */
-            background-repeat: no-repeat; /* Prevent image repetition */
-            background-attachment: fixed; /* Fixed background */
-            background-position: center center; /* Center the background image */
+            background-size: cover; 
+            background-repeat: no-repeat; 
+            background-attachment: fixed; 
+            background-position: center center; 
         }
 
-        /* Styling for the container that centers the form */
+        
         .container {
             display: flex;
             justify-content: center;
@@ -22,17 +22,17 @@
             min-height: 100vh;
         }
 
-        /* Styling for the form container */
+      
         .form-container {
-            max-width: 600px; /* Adjust the maximum width */
-            padding: 30px; /* Adjust the padding to increase size */
+            max-width: 600px; 
+            padding: 30px;
             border: 1px solid #ccc;
             border-radius: 10px;
             background-color: #f5f5f5;
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
         }
 
-        /* Styling for form elements */
+       
         .form-container label, .form-container select, .form-container input[type="text"] {
             display: block;
             margin-bottom: 10px;
@@ -58,7 +58,7 @@
             background-color: #0056b3;
         }
 
-        /* Styling for the confirmation message */
+        
         .confirmation-message {
             display: none;
             text-align: center;
@@ -94,7 +94,7 @@
                 <button type="submit">Submit</button>
             </form>
 
-            <!-- Confirmation message -->
+            
             <div class="confirmation-message" id="confirmationMessage">
                 Thank you for submitting your information!
             </div>
@@ -102,13 +102,11 @@
     </div>
 
     <script>
-        // JavaScript for handling form submission
+        
         document.getElementById("farmersForm").addEventListener("submit", function (event) {
-            event.preventDefault(); // Prevent the default form submission behavior
+            event.preventDefault(); 
 
-            // You can add code here to send the form data to your server or perform any other actions you need.
-            
-            // Display the confirmation message
+           
             document.getElementById("confirmationMessage").style.display = "block";
             window.location.href = "client.html";
         });
